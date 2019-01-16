@@ -299,7 +299,10 @@ def problem1b(strings):
     # TODO: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
-
+    strings = []
+    for k in range (1, len(sequence),3):
+        strings_append(sequence[k]):
+        return strings
 
 def run_test_problem1c():
     """ Tests the   problem1c   function. """
@@ -395,6 +398,10 @@ def problem1c(integers):
     # TODO: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
+    for k in range(len(integers)):
+        integer = integers[k]
+        if integer< index
+            return (interger[0])
 
 
 def run_test_problem1d():
