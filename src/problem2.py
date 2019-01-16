@@ -3,8 +3,8 @@ Exam 2, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Paige Swango.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import math
 import time
@@ -13,7 +13,7 @@ import testing_helper
 
 
 ###############################################################################
-# TODO: 2.  READ the   Point   class defined below.
+# DONE: 2.  READ the   Point   class defined below.
 #  Note especially its methods:
 #    clone
 #    distance_from
@@ -88,7 +88,7 @@ def main():
     print(' to run the testing code as you complete the TODOs.')
 
     # run_test_init()
-    # run_test_area()
+    run_test_area()
     # run_test_bigger_triangle()
     # run_test_shrink_or_expand()
     # run_test_return_doubled_triangle()
@@ -146,6 +146,25 @@ class Triangle(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # ---------------------------------------------------------------------
+        p1 = Point(30,17)
+        p2 = Point(50,80)
+        p3 = Point(35,15)
+        self.a = p1
+        self.b = p2
+        self.c = p3
+        triangle = Triangle(p1,p2,p3)
+        print(triangle.a)
+        print(triangle.b)
+        print(triangle.c)
+        if triangle.a == p1:
+            print('True')
+        else:
+            triangle.a = p1
+            print('False')
+
+
+
+
 
     def area(self):
         """
@@ -186,6 +205,11 @@ class Triangle(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # ---------------------------------------------------------------------
+        a= Point(15,30)
+        b= Point(15,50)
+        c= Point(35,45)
+        S = (1/2)*(15+20.6+22.4)
+
 
     def bigger_triangle(self, triangle2):
         """
@@ -209,6 +233,11 @@ class Triangle(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # ---------------------------------------------------------------------
+        if Triangle > triangle2:
+            return True
+        else:
+            return False
+
 
     def shrink_or_expand(self, f):
         """
@@ -232,6 +261,11 @@ class Triangle(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # ---------------------------------------------------------------------
+        n = self.shrink()
+        return len(n)
+
+
+
 
     def return_doubled_triangle(self):
         """
@@ -255,6 +289,10 @@ class Triangle(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # -------------------------------------------------------------------------
+        n= self.double()
+        n= n + self.shrink(new_area)
+        return len(n)
+
 
     def get_largest_area(self):
         """
